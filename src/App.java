@@ -1,10 +1,12 @@
 
-//imort scanner class for getting user input
+//import scanner class for getting user input
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        //declaring variables
         int length, width, area;
+        //create a new instance of the Scanner class and pass System.in in the constructor
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Program to Calculate area of a rectangle:\nLength: ");
