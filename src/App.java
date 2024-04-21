@@ -8,23 +8,22 @@ public class App {
         // create a new instance of the Scanner class and pass System.in in the
         // constructor
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Program to check if a number is prime or not :\nEnter a number: ");
-        int num = scanner.nextInt();
-        int count = 0; // variables for counting factors of num
-
-        // checking if the number is prime or not
-        for (int i = 1; i <= num; i++) {
-            if (num % i == 0) {
-                count += 1;
+        int num, max = 0, min = 0;
+        int[] numbers = new int[5];
+        System.out.println("Program to find the maximum and minimum of numbers given\n");
+        System.out.println("Enter the numbers and press Enter:");
+        for (int i = 0; i < 5; i++) {
+            min = numbers[0];
+            num = scanner.nextInt();
+            numbers[i] = num;
+            if (numbers[i] > min) {
+                max = numbers[i];
+            } else {
+                min = numbers[i];
             }
+
         }
-        if (count == 2) {
-            // a prime numnber has only 2 factors, itself and 1;
-            System.out.println(num + " is a prime number");
-        } else {
-            System.out.println(num + " is not a prime number");
-        }
+        System.out.println(max + " is the maximum value and " + min + " is the minimum");
 
     }
 }
