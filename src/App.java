@@ -3,27 +3,28 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        // create a new instance of the Scanner class and pass System.in in the
-        // constructor
-        Scanner scanner = new Scanner(System.in);
-        int num, max = 0, min = 0;
-        int[] numbers = new int[5];
-        System.out.println("Program to find the maximum and minimum of numbers given\n");
-        System.out.println("Enter the numbers and press Enter:");
-        for (int i = 0; i < 5; i++) {
-            min = numbers[0];
-            num = scanner.nextInt();
-            numbers[i] = num;
-            if (numbers[i] > min) {
-                max = numbers[i];
-            } else {
-                min = numbers[i];
-            }
+    int num = 0;
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Program to calculate the factorial of a number: \n");
+    System.out.println("Enter a number: ");
 
-        }
-        System.out.println(max + " is the maximum value and " + min + " is the minimum");
+    num = scanner.nextInt();
+    int result = factCalc(num);
+    System.out.println("The factorial of " + num + " is " + result + "\n");
 
+    scanner.close(); // Close the Scanner object
+
+  }
+
+  public static int factCalc(int number) {
+    int res = 1;
+
+    for (int i = 1; i <= number; i++) {
+      res = res * i;
     }
+    return res;
+
+  }
 }
